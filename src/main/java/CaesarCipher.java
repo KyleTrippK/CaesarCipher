@@ -1,26 +1,41 @@
+import java.util.Scanner;
+import java.io.Console;
 public class CaesarCipher {
 
-    private String message;
+
+    private String messages;
+//    String messages = message.toUpperCase();
     private int shiftKey;
 
-    public CaesarCipher (String message, int shiftKey){
-        this.message = message;
+    public CaesarCipher (String messages, int shiftKey){
+        this.messages = messages;
         this.shiftKey = shiftKey;
     }
 
     // Encrypt the message
 
-    public static StringBuffer encrypt(String text, int shiftKey){
+    public static String encrypt(String messages, int shiftKey){
+        String characters = "abcdefghijklmnopqrstuvwxyz";
+        messages.toLowerCase();
         StringBuffer cypherText = new StringBuffer();
-        for (int x=0; x<text.length(); x++){
-
-        }
-        return cypherText;
+            for (int x=0; x<messages.length(); x++){
+                if(!Character.isLetter(messages.charAt(x))){
+                    cypherText.append(messages.charAt(x));
+                }else{
+                    int  character = characters.indexOf(messages.charAt(x));
+                    int shift =(character + shiftKey)%26;
+                    char cypher = characters.charAt(shift);
+                    cypherText.append(cypher).toString();
+                }
+            }
+        return cypherText.toString();
     }
     public String getMessage(){
-        return message;
-}
+
+        return messages;
+    }
     public int getShiftKey(){
+
         return shiftKey;
     }
 }
