@@ -15,8 +15,9 @@ public class CipherDecrypt {
     public static String decrypt(String messages, int shiftKey){
         String characters = "zyxwvutsrqponmlkjihgfedcba";
         messages.toLowerCase();
+        int messageLength = messages.length();
         StringBuffer cypherText = new StringBuffer();
-        for (int x=0; x<messages.length(); x++){
+        for (int x=0; x<messageLength; x++){
             if(!Character.isLetter(messages.charAt(x))){
                 cypherText.append(messages.charAt(x));
             }else{

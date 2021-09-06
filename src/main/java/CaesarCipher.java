@@ -16,8 +16,9 @@ public class CaesarCipher {
     public static String encrypt(String messages, int shiftKey){
         String characters = "abcdefghijklmnopqrstuvwxyz";
         messages.toLowerCase();
+        int messageLength = messages.length();
         StringBuffer cypherText = new StringBuffer();
-            for (int x=0; x<messages.length(); x++){
+            for (int x=0; x<messageLength; x++){
                 if(!Character.isLetter(messages.charAt(x))){
                     cypherText.append(messages.charAt(x));
                 }else{
