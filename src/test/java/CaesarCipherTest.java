@@ -13,4 +13,8 @@ public class CaesarCipherTest {
         CaesarCipher testCaesar = new CaesarCipher("message", 3);
         assertEquals(3, testCaesar.getShiftKey());
     }
+
+    @Test
+    public void CaesarCipher_loops() {
+    }
 }

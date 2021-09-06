@@ -1,16 +1,16 @@
-public class Cipherdecrypt {
+public class CipherDecrypt {
 
 
     private String messages;
     //    String messages = message.toUpperCase();
     private int shiftKey;
 
-    public Cipherdecrypt(String messages, int shiftKey){
+    public CipherDecrypt(String messages, int shiftKey){
         this.messages = messages;
         this.shiftKey = shiftKey;
     }
 
-    // Encrypt the message
+    // decrypt the message
 
     public static String decrypt(String messages, int shiftKey){
         String characters = "zyxwvutsrqponmlkjihgfedcba";
@@ -29,11 +29,9 @@ public class Cipherdecrypt {
         return cypherText.toString();
     }
     public String getMessage(){
-
         return messages;
     }
     public int getShiftKey(){
-
         return shiftKey;
     }
 }

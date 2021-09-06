@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import java.io.Console;
+
 public class CaesarCipher {
 
 
@@ -35,7 +34,6 @@ public class CaesarCipher {
         return messages;
     }
     public int getShiftKey(){
-
         return shiftKey;
     }
 }
