@@ -8,9 +8,9 @@ public class App {
         Console output = System.console();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose E for Encrypt, D for Decrypt or Q for Quit");
-        int choice = Integer.parseInt(output.readLine());
+        String choice = (output.readLine());
 
-        if (choice == 1) {
+        if (choice == "E") {
 
             System.out.println("input the text to be Encrypted");
             String text = scanner.nextLine();
@@ -21,7 +21,7 @@ public class App {
             System.out.println(CaesarCipher.encrypt(text, key));
 
 
-        } else {
+        } else if (choice == "D"){
             System.out.println("input the cypher text to be Decrypted");
             String text = scanner.nextLine();
             System.out.println("input the shiftKey");
@@ -30,6 +30,9 @@ public class App {
 //          CaesarCipher caesar = new CaesarCipher(text,key);
             System.out.println(CipherDecrypt.decrypt(text,key));
 
+        }
+        else {
+            System.out.println("Bye");
         }
     }
 }
