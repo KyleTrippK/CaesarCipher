@@ -4,13 +4,15 @@ import java.util.Scanner;
 
 public class App {
 
+
+
     public static void main(String[] args){
         Console output = System.console();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose E for Encrypt, D for Decrypt or Q for Quit");
         String choice = (output.readLine());
 
-        if (choice == "E") {
+        if (choice.equals("E")) {
 
             System.out.println("input the text to be Encrypted");
             String text = scanner.nextLine();
@@ -21,7 +23,7 @@ public class App {
             System.out.println(CaesarCipher.encrypt(text, key));
 
 
-        } else if (choice == "D"){
+        } else if (choice.equals("D")) {
             System.out.println("input the cypher text to be Decrypted");
             String text = scanner.nextLine();
             System.out.println("input the shiftKey");
