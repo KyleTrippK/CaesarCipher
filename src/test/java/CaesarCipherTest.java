@@ -17,7 +17,7 @@ public class CaesarCipherTest {
     }
 
     @Test
-    public void CaesarCipher_encrypts_otd(){
+    public void CaesarCipher_encrypts_otd() {
         CaesarCipher encrypt = new CaesarCipher("otd", 5);
         assertEquals("otd", encrypt.encrypt("joy", 5));
     }
