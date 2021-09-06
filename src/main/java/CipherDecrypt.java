@@ -30,9 +30,11 @@ public class CipherDecrypt {
         return cypherText.toString();
     }
     public String getMessage(){
+
         return messages;
     }
     public int getShiftKey(){
+
         return shiftKey;
     }
 }
